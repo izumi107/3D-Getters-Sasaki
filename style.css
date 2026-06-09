@@ -47,19 +47,22 @@ body {
 
 .subtitle {
     font-size: 0.9rem;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     color: #e2bda0;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
-.main-header h1 {
-    font-size: 2.2rem;
+/* ★ タイトルの文字サイズ調整（スマホで改行されないサイズに縮小） ★ */
+.main-title {
+    font-size: 1.75rem; /* 2.2remから縮小し、スマホでの「占、い」の改行を防止 */
     margin-bottom: 15px;
     font-weight: 700;
+    letter-spacing: 0.05em;
+    white-space: nowrap; /* 画面幅が極端に狭くても絶対に文字を途中で千切らないお守り */
 }
 
 .lead-text {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #f7ebd9;
 }
 
@@ -75,6 +78,17 @@ body {
     font-size: 0.9rem;
     color: #554744;
     box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+/* ★ 注釈・免責事項のスタイル ★ */
+.disclaimer {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #e8dec9;
+    font-size: 0.75rem !important;
+    color: #887672;
+    text-align: left;
+    line-height: 1.5;
 }
 
 /* ルール説明ボックス */
@@ -128,7 +142,7 @@ body {
     margin-bottom: 5px;
 }
 
-/* 自作マップセクションのスタイル */
+/* 自作マップセクション */
 .map-section {
     background-color: #fff;
     border: 1px solid #e8dec9;
@@ -145,7 +159,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* ★ 画像を綺麗に収めるシステム ★ */
 .map-container {
     width: 100%;
     background-color: #fffaf0;
@@ -158,9 +171,9 @@ body {
 }
 
 .custom-map-img {
-    width: 100%;       /* 親要素の幅いっぱいに広げる */
-    max-width: 100%;   /* 絶対に画面からはみ出さない */
-    height: auto;      /* 縦横比をキープする */
+    width: 100%;       
+    max-width: 100%;   
+    height: auto;      
     border-radius: 4px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
@@ -286,6 +299,7 @@ body {
 .notes {
     font-size: 0.8rem;
     color: #e2bda0;
+    line-height: 1.6;
 }
 
 /* フッター */
@@ -298,8 +312,11 @@ body {
     margin-top: 60px;
 }
 
-/* スマホ以外の大きな画面でのレイアウト */
+/* パソコンなどの大きな画面での表示調整 */
 @media (min-width: 768px) {
+    .main-title {
+        font-size: 2.2rem; /* PCやタブレットなど、横幅に余裕がある時は大きく見せる */
+    }
     .menu-card {
         padding: 25px;
     }
