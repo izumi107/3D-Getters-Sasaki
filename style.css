@@ -52,13 +52,13 @@ body {
     margin-bottom: 12px;
 }
 
-/* ★ タイトルの文字サイズ調整（スマホで改行されないサイズに縮小） ★ */
+/* タイトルの文字サイズ調整（スマホでの「占、い」の改行を防止） */
 .main-title {
-    font-size: 1.75rem; /* 2.2remから縮小し、スマホでの「占、い」の改行を防止 */
+    font-size: 1.75rem; 
     margin-bottom: 15px;
     font-weight: 700;
     letter-spacing: 0.05em;
-    white-space: nowrap; /* 画面幅が極端に狭くても絶対に文字を途中で千切らないお守り */
+    white-space: nowrap; 
 }
 
 .lead-text {
@@ -80,12 +80,12 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.02);
 }
 
-/* ★ 注釈・免責事項のスタイル ★ */
+/* 注釈・免責事項のスタイル */
 .disclaimer {
     margin-top: 15px;
     padding-top: 15px;
     border-top: 1px dashed #e8dec9;
-    font-size: 0.75rem !important;
+    font-size: 0.75rem;
     color: #887672;
     text-align: left;
     line-height: 1.5;
@@ -315,7 +315,7 @@ body {
 /* パソコンなどの大きな画面での表示調整 */
 @media (min-width: 768px) {
     .main-title {
-        font-size: 2.2rem; /* PCやタブレットなど、横幅に余裕がある時は大きく見せる */
+        font-size: 2.2rem;
     }
     .menu-card {
         padding: 25px;
